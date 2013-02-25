@@ -1,0 +1,8 @@
+cb1:  Hi there, nice to have you on board.
+cb2:  Nice to be aboard, What's your name?
+cb1:  Tetris is my name.
+cb2:  Isn't that a video game?
+cb1:  Yes, I am a girl.
+cb2:  Good for you.
+cb1:  Are you a boy?
+cb2:  No.

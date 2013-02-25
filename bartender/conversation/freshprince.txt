@@ -1,0 +1,24 @@
+user@MEDIACTR:~/Documents/bartender/conversation$ python AI_convo.py 
+cb1:  Hi!
+cb2:  In west philidelphia.
+cb1:  What?
+cb2:  Born and raised.
+cb1:  On the playground is where I spent most of my days.
+cb2:  Chillin out max relaxin all cool.
+cb1:  Playing some b-ball outside of school.
+cb2:  When a couple of guys they were up to no good.
+cb1:  Starting making trouble in my neighborhood.
+cb2:  I got in one little fight and my mom got scared.
+cb1:  She said 'you're moving with your auntie and uncle in Bel Air'.
+cb2:  I whistled for a cab and when it came near.
+cb1:  The license plate said fresh and it had dice in the mirror.
+cb2:  If anything I could say that this cab was rare.
+cb1:  But I thought 'Now forget it' - 'Yo homes to Bel Air'.
+cb2:  I pulled up to the house about 7 or 8.
+cb1:  And I yelled to the cabbie 'Yo homes smell ya later'.
+cb2:  Looked at my kingdom I was finally there.
+cb1:  To settle my throne as the Prince of Bel Air.
+cb2:  I say to thee, job well done.
+cb1:  Yes it is.
+cb2:  Well.. It was a pleasure talking with you. Now I must go.. Goodnight!
+

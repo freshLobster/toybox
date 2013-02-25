@@ -1,0 +1,10 @@
+import pywapi
+import pprint
+import subprocess
+
+pp = pprint.PrettyPrinter(indent=4)
+
+result = pywapi.get_weather_from_yahoo('10001', 'metric')
+subprocess.call('espeak -s 160 -p 30 -k20 -v en ' + '"' + result + '"', shell=True)
+pp.pprint(result)
+
