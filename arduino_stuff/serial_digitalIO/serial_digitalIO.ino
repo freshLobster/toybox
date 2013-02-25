@@ -1,7 +1,11 @@
-/*turns on and off pins via serial commands
-Example serial command: 13a //pin 13 set active
-                        13s //pin 13 set sleep
+/* 
+Uses serial data to turn on and off pins.
+currently only reads one character at a time.
+Also the pin numbers are offset by 2 because 
+pins 0 and 1 are used for serial communication.
+so if the serial reads 11 pin 13 will be controlled.
 */
+
 const int numPins = 12;//for now I'm using 10 pins
                   //0-9 in the array
                   //2-12 on the arduino

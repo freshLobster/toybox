@@ -2,17 +2,18 @@
 written by: Aidan Seine
 aidanseine@gmail.com
 '''
-## import the serial library
+# import the serial library
 import serial
 # time library for delay
 import time
 # open the serial port that your arduino 
-# is connected to.
+# is connected to and set the baud rate.
 ser = serial.Serial("/dev/ttyACM0", 9600)
 #blink function
 def blink():
 	# working on this, but basically this
-	# turns on pin 13
+	# turns on pin 13 (still working on
+	#multiple character reading in arduino)
 	ser.write(';')
 	# delay one second
 	time.sleep(1)
