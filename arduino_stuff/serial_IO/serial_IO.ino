@@ -11,7 +11,9 @@ void loop(){
   char inChar; // Where to store the character read
   int goodRead = 0;
   while(Serial.available() > 0){
-    goodRead = Serial.readBytesUntil('#', inData, 21);
+    if (Serial.read() == '!'){
+      goodRead = Serial.readBytesUntil('#', inData, 21);
+    }
   }
   if (goodRead != 0){
     String command = inData;
@@ -25,16 +27,24 @@ void activate(String command){
   int power = getPower(command);
   int input = 0;
   switch(mode){
-    case 'r':
-      pinMode(pin, INPUT);
-      input = analogRead(pin);
-      Serial.write(input);
-      break;
-    case 'w':
-      pinMode(pin, OUTPUT);
-      analogWrite(pin, power);
-      break;
-    default: break;
+  case 'r':
+    pinMode(pin, INPUT);
+    input = analogRead(pin);
+    Serial.write(input);
+    break;
+  case 'w':
+    pinMode(pin, OUTPUT);
+    analogWrite(pin, power);
+    break;
+  case 't':
+    pinMode(pin, OUTPUT);
+    tone(pin, power);
+    break;
+  case 'q':
+    noTone(pin);
+    break;
+  default: 
+    break;
   }
 }
 
@@ -49,13 +59,13 @@ int getPin(String command){
   char buffer[pinStr.length()+1];
   pinStr.toCharArray(buffer, pinStr.length()+1);
   /*if (command.indexOf('@') >= 2){
-    buffer[0] = command.charAt(1);
-    buffer[1] = command.charAt(2);
-  }
-  else{ 
-    buffer[0] = '0';
-    buffer[1] = command.charAt(1);
-  }*/
+   buffer[0] = command.charAt(1);
+   buffer[1] = command.charAt(2);
+   }
+   else{ 
+   buffer[0] = '0';
+   buffer[1] = command.charAt(1);
+   }*/
   pin = atoi(buffer);
   return pin;
 }
@@ -70,5 +80,6 @@ int getPower(String command){
   power = atoi(buffer);
   return power;
 }
+
 
 
